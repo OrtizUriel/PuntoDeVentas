@@ -8,9 +8,7 @@ public class ClassProductos {
 	private String folioProducto;
 	private float precio;
 	private String nombreproveedor;
-	public ClassProductos(String tipoProducto, int cantidadProduct, int tipoProductoID, String nomProducto,
-			String folioProducto, float precio, String nombreproveedor) {
-		
+	public ClassProductos(String tipoProducto, int cantidadProduct, int tipoProductoID, String nomProducto,String folioProducto, float precio, String nombreproveedor) {		
 		this.tipoProducto = tipoProducto;
 		this.cantidadProduct = cantidadProduct;
 		this.tipoProductoID = tipoProductoID;
@@ -30,6 +28,7 @@ public class ClassProductos {
 	}
 	public void setCantidadProduct(int cantidadProduct) {
 		this.cantidadProduct = cantidadProduct;
+		System.out.println(cantidadProduct);
 	}
 	public int getTipoProductoID() {
 		return tipoProductoID;

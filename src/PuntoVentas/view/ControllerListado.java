@@ -192,4 +192,24 @@ public class ControllerListado {
 			e.printStackTrace();
 		}
 	}
+	
+    @FXML
+    private Button Productos;
+	@FXML
+    void listaProductos() {
+		try {
+			AnchorPane root2 = (AnchorPane)FXMLLoader.load(getClass().getResource("FXMLPuntoVentasPRODUCTOS.fxml"));
+			Scene scene = new Scene (root2);
+			Stage primaryLayout = new Stage();
+			primaryLayout.setScene(scene);
+			primaryLayout.setTitle("FXMLPuntoVentasPRODUCTOS");
+			primaryLayout.show();
+			Stage nuevaEscena =(Stage) this.ventaYflujo.getScene().getWindow();
+			nuevaEscena.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+    }
 }

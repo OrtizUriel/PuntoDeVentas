@@ -11,10 +11,11 @@
    <children>
       <ImageView fitHeight="523.0" fitWidth="624.0" layoutY="-9.0" pickOnBounds="true" />
       <TextField fx:id="cajatipoProduct" layoutX="225.0" layoutY="116.0" prefHeight="25.0" prefWidth="338.0" />
-      <TextField fx:id="cajanombreProveedor" layoutX="249.0" layoutY="263.0" prefHeight="25.0" prefWidth="320.0" />
-      <TextField fx:id="cajaPrecio" layoutX="117.0" layoutY="227.0" prefHeight="25.0" prefWidth="450.0" />
-      <TextField fx:id="cajaFolio" layoutX="109.0" layoutY="190.0" prefHeight="25.0" prefWidth="457.0" />
       <TextField fx:id="cajaNombre" layoutX="147.0" layoutY="153.0" prefHeight="25.0" prefWidth="418.0" />
+      <TextField fx:id="cajaFolio" layoutX="109.0" layoutY="190.0" prefHeight="25.0" prefWidth="457.0" />
+      <TextField fx:id="cajaPrecio" layoutX="117.0" layoutY="227.0" prefHeight="25.0" prefWidth="450.0" />
+      <TextField fx:id="cajanombreProveedor" layoutX="249.0" layoutY="263.0" prefHeight="25.0" prefWidth="320.0" />
+      <TextField fx:id="CAJAnproductos" layoutX="272.0" layoutY="303.0" prefHeight="25.0" prefWidth="297.0" />
       <Label layoutX="54.0" layoutY="116.0" text="Tipo de producto">
          <font>
             <Font size="22.0" />
@@ -52,6 +53,6 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="CAJAnproductos" layoutX="272.0" layoutY="303.0" prefHeight="25.0" prefWidth="297.0" />
+      <Button fx:id="Regresar" layoutX="374.0" layoutY="426.0" mnemonicParsing="false" onAction="#cargarListado" style="-fx-background-color: #ff5757;" text="Regresar" textFill="WHITE" />
    </children>
 </AnchorPane>

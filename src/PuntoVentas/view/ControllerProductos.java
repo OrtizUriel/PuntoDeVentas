@@ -99,7 +99,8 @@ public class ControllerProductos implements Initializable{
 			rs = st.executeQuery(query);
 			ClassProductos Productos;
 			while(rs.next()) {
-				Productos = new ClassProductos(rs.getString("tipoProduct"),rs.getInt("CantidadProducto"),rs.getInt("IDtipoProduct"),rs.getString("nombre"),rs.getString("folioproduct"),rs.getFloat("precio"),rs.getString("nombreProveedor"));
+				Productos = new ClassProductos(rs.getString("tipoProduct"),rs.getInt("Cantidad"),rs.getInt("IDtipoProduct"),rs.getString("nombre"),rs.getString("folioproduct"),rs.getFloat("precio"),rs.getString("nombreProveedor"));
+				System.out.println(rs.getInt("Cantidad"));
 				productList.add(Productos);
 			}
 		}catch (Exception e) {
@@ -160,8 +161,8 @@ public class ControllerProductos implements Initializable{
 	
 	
 	@FXML 
-	private void modificar(ActionEvent event) {
-		String query = "UPDATE datosproduct SET tipoProduct='"+cajatipoProduct.getText()+"',CantidadProducto='"+CAJAnPRODUCT.getText()+"',nombre='"+cajanombreProduct.getText()+"',folioproduct='"+cajafolioProduct.getText()+"',precio='"+cajaprecio.getText()+"',nombreProveedor='"+cajanombreProvee.getText()+"' WHERE IDtipoProduct='"+cajaIDtipoProduct.getText()+"'";
+	private void modificar() {
+		String query = "UPDATE datosproduct SET tipoProduct='"+cajatipoProduct.getText()+"',Cantidad='"+CAJAnPRODUCT.getText()+"',nombre='"+cajanombreProduct.getText()+"',folioproduct='"+cajafolioProduct.getText()+"',precio='"+cajaprecio.getText()+"',nombreProveedor='"+cajanombreProvee.getText()+"' WHERE IDtipoProduct='"+cajaIDtipoProduct.getText()+"'";
 		executeQuery(query);
 		ObservableList<ClassProductos> list = getPersonList();
 		tablaProduct.getItems().setAll(list);
@@ -172,7 +173,7 @@ public class ControllerProductos implements Initializable{
     }
 	
 	@FXML
-	private void eliminar(ActionEvent event) {
+	private void eliminar() {
 		String query = "DELETE FROM datosproduct WHERE IDtipoProduct="+cajaIDtipoProduct.getText()+"";
 		executeQuery(query);
 		ObservableList<ClassProductos> list = getPersonList();

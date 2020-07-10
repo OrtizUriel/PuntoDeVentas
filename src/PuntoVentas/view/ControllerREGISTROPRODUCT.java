@@ -58,14 +58,14 @@ public class ControllerREGISTROPRODUCT {
 		Connection cn = ConnectorMySQL.getConnection();
         try {
         	System.out.println("HOLI");
-            String sSQLL = "INSERT INTO datosproduct (tipoProduct,CantidadProducto,nombre,folioProduct,precio,nombreProveedor) VALUES(?,?,?,?,?,?)";
+            String sSQLL = "INSERT INTO datosproduct (tipoProduct,nombre,folioProduct,precio,nombreProveedor,Cantidad) VALUES(?,?,?,?,?,?)";
             PreparedStatement stt = cn.prepareStatement(sSQLL);
-            stt.setString(1,(cajatipoProduct.getText()));
-            stt.setInt(2,Integer.parseInt(CAJAnproductos.getText()));
-            stt.setString(3,cajaNombre.getText());
-            stt.setString(4,cajaFolio.getText());
-            stt.setFloat(5,Float.parseFloat(cajaPrecio.getText()));
-            stt.setString(6,cajanombreProveedor.getText());
+            stt.setString(1,(cajatipoProduct.getText()));            
+            stt.setString(2,cajaNombre.getText());
+            stt.setString(3,cajaFolio.getText());
+            stt.setFloat(4,Float.parseFloat(cajaPrecio.getText()));
+            stt.setString(5,cajanombreProveedor.getText());
+            stt.setInt(6 ,Integer.parseInt(CAJAnproductos.getText()));
             stt.execute();
         }catch (SQLException e){
             e.printStackTrace();
